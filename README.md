@@ -1,34 +1,29 @@
-# TS2Vec
+# Spatio-temporal TS2Vec
 
-This repository contains the official implementation for the paper [TS2Vec: Towards Universal Representation of Time Series](https://arxiv.org/abs/2106.10466) (AAAI-22).
+This repository contains the generalization of the spatio-temporal TS2Vec from time series to the spatio-temporal domain.
 
 ## Requirements
 
 The recommended requirements for TS2Vec are specified as follows:
-* Python 3.8
-* torch==1.8.1
+* Bottleneck
+* torch==1.10.1
 * scipy==1.6.1
 * numpy==1.19.2
+* statsmodels==0.12.2
 * pandas==1.0.1
 * scikit_learn==0.24.2
-* statsmodels==0.12.2
-* Bottleneck==1.3.2
-
-The dependencies can be installed by:
-```bash
-pip install -r requirements.txt
+* pytorch-lightning==1.9.1
+* torchmetrics
+* torchvision
+* omegaconf
 ```
 
 ## Data
 
 The datasets can be obtained and put into `datasets/` folder in the following way:
 
-* [128 UCR datasets](https://www.cs.ucr.edu/~eamonn/time_series_data_2018) should be put into `datasets/UCR/` so that each data file can be located by `datasets/UCR/<dataset_name>/<dataset_name>_*.csv`.
-* [30 UEA datasets](http://www.timeseriesclassification.com) should be put into `datasets/UEA/` so that each data file can be located by `datasets/UEA/<dataset_name>/<dataset_name>_*.arff`.
-* [3 ETT datasets](https://github.com/zhouhaoyi/ETDataset) should be placed at `datasets/ETTh1.csv`, `datasets/ETTh2.csv` and `datasets/ETTm1.csv`.
-* [Electricity dataset](https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014) should be preprocessed using `datasets/preprocess_electricity.py` and placed at `datasets/electricity.csv`.
-* [Yahoo dataset](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70) should be preprocessed using `datasets/preprocess_yahoo.py` and placed at `datasets/yahoo.pkl`.
-* [KPI dataset](http://test-10056879.file.myqcloud.com/10056879/test/20180524_78431960010324/KPI%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E5%86%B3%E8%B5%9B%E6%95%B0%E6%8D%AE%E9%9B%86.zip) should be preprocessed using `datasets/preprocess_kpi.py` and placed at `datasets/kpi.pkl`.
+* [Drought data](https://github.com/Astralex98/long-term-drought-prediction) should be put into `datasets/` so that each data file can be located by `datasets/<dataset_name>.csv`.
+* [ERA-5 data](https://mediatum.ub.tum.de/1524895) should be put into `datasets/` so that each data file can be located by `datasets/<dataset_name>.pt`. To transform raw data to .pt you can use [notebook](https://colab.research.google.com/drive/1tV7iFRAP3zIzCfX6uGjwrG7BjWvd4jHe?usp=sharing).
 
 
 ## Usage
