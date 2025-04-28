@@ -38,4 +38,4 @@ cd main
 
 After training and evaluation, the weights of the trained encoder (`TS2Vec.pth`) can be found in `ts2vec/training` folder. 
 
-**Downstream task:** To evaluate the weights of the pretrained encoder you can use [Downstream problem evaluation notebook](https://colab.research.google.com/drive/14XChfYfhBx9xq_f9UdVQEtVIq0Y4rdsS?usp=sharing). To use this jupyter notebook you need to store weights from the encoder and download them during the evaluation. For example, you can store the weights in the Google Drive and download them using `gdown`.
+**Downstream task:** To evaluate the weights of the pretrained encoder you can use [Downstream problem evaluation notebook](https://colab.research.google.com/drive/14XChfYfhBx9xq_f9UdVQEtVIq0Y4rdsS?usp=sharing). To use this jupyter notebook you need to store weights from the encoder and download them during the evaluation. For example, you can store the weights in the Google Drive and download them using `gdown` like it was done in the notebook **Downstream problem evaluation notebook**.
