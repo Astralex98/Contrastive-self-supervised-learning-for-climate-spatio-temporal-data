@@ -16,7 +16,6 @@ The recommended requirements for TS2Vec are specified as follows:
 * torchmetrics
 * torchvision
 * omegaconf
-```
 
 ## Data
 
