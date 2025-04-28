@@ -1,0 +1,35 @@
+data:
+  data_dir: "datasets"
+  name:  "ERA_5_temp_step_24_h_years_1979_2016_resolution_2_8125.pt"
+  add_features: ["ERA_5_precip_step_24_h_years_1979_2016_resolution_2_8125.pt"]
+#   name:  "pdsi_MadhyaPradesh.csv"
+#   add_features: ["pdsi_Missouri.csv"]
+  history: 40
+  # с каким шагом мы берем временные данные. Например, при step_size = 120 мы берем каждый 120-ый сэмп 
+  step_size: 1
+  is_our_loss: True
+
+optim:
+  device: 0 # To use cpu write "cpu"
+  batch_size: 1
+  seed: 0
+  lr: 0.001
+  max_epochs: 100
+  patience: 10
+  # loss = alpha * instance_loss + (1 - alpha) * temporal_loss
+  alpha: 0.5
+
+model:
+   
+   # ConvLSTM hyperparameters
+   hidden_dims: 8
+   cell_output_dims: 8
+   region_output_dims: 512
+   kernel_size: ${tuple:3,3}
+   conv1d_kernel_size: 3
+   num_layers: 3
+   # Гиперпараметры пространственных аугментаций
+   # Для их понимания см.метод __getitem__ класса Dataset_RNN
+   resize_shape: 60
+   blur_kernel_size: 5
+   pool_win_size: 5
