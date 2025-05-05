@@ -33,7 +33,7 @@ To train and evaluate TS2Vec on a dataset, run the following command in the proj
 docker build . -t=ts2vec_image
 docker run -it --rm --shm-size=256m --memory=64g --memory-swap=64g --cpuset-cpus=0-5 --gpus '"device=0,1"' -v $(pwd):/prj/main -p 8001:8001 --gpus 1 --name "your_name" ts2vec_image bash
 cd main
-/prj/ts2vec/bin/python train.py your_project_name --gpu 0
+/prj/ts2vec/bin/python train.py your_project_name run_name --gpu 0
 ```
 
 After training and evaluation, the weights of the trained encoder (`TS2Vec.pth`) can be found in `ts2vec/training` folder. 
