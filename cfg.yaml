@@ -4,10 +4,10 @@ data:
   add_features: ["ERA_5_precip_step_24_h_years_1979_2016_resolution_2_8125.pt"]
 #   name:  "pdsi_MadhyaPradesh.csv"
 #   add_features: ["pdsi_Missouri.csv"]
-  history: 40
+  history: 60
   # с каким шагом мы берем временные данные. Например, при step_size = 120 мы берем каждый 120-ый сэмп 
   step_size: 1
-  is_our_loss: False
+  is_our_loss: True
 
 optim:
   device: 0 # To use cpu write "cpu"
