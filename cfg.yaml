@@ -7,7 +7,7 @@ data:
   history: 40
   # с каким шагом мы берем временные данные. Например, при step_size = 120 мы берем каждый 120-ый сэмп 
   step_size: 1
-  is_our_loss: True
+  is_our_loss: False
 
 optim:
   device: 0 # To use cpu write "cpu"
