@@ -1,7 +1,9 @@
 # Spatio-temporal TS2Vec
 
 This repository contains the generalization of the spatio-temporal TS2Vec from time series to the spatio-temporal domain. We used temperature and precipitation data from 1979 to 2016 to pretrain the encoder using SSL-regime. To evaluate
-performance of the embeddings we used temperature data from 2016 to 2018 and drought prediction task for Northern Kazakhstan and Goias (Brazil). For the **drought prediction task** our aggregated ROC-AUC is nearly 0.7 for one month prediction ahead,
+performance of the embeddings we used temperature data from 2016 to 2018 and drought prediction task for Northern Kazakhstan and Goias (Brazil). 
+
+For the **drought prediction task** our aggregated ROC-AUC is nearly 0.7 for one month prediction ahead,
 while on the **temperature forecasting** we achieve 15.5 RMSE metric for one week prediction ahead.
 
 ## Requirements
